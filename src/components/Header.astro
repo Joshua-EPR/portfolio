@@ -1,0 +1,19 @@
+---
+let { id, title, text, link, img, alt} = Astro.props;
+---
+
+<div class="flex justify-center flex-col items-center p-4 h-screen" id={ id }>
+    <div class="w-80 h-80">
+        <img class="w-full h-full hover:rotate-3 cursor-pointer transition-all" src={ img } alt={ alt }>
+    </div>
+    <div class="m-3 p-2">
+        <h1 class="text-4xl">{ title }</h1>
+    </div>
+    <div class="p-6 w-[70vw] flex flex-col gap-2">
+        <p class="text-2xl m-4">{ text }</p>
+        <div class="flex">
+            <a href={ link } target="_blank" class="p-3 m-2 text-xl bg-blue-500 w-32 h-12 rounded-md hover:bg-yellow-300 transition-all hover:text-black"><i class="fa-brands fa-github"></i> Github</a>
+            <!-- <img src="https://i.postimg.cc/pdcJvGp5/images-removebg-preview.png" alt="flecha" class="w-12 h-12 rotate-90 tex"> -->
+        </div>
+    </div>
+</div>

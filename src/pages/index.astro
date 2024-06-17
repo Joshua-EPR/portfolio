@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Menu from '../components/Menu.astro';
+import Certs from '../components/Certs.astro';
+---
+
+<Layout title="Joshua Emil || Web developer">
+	<main>
+		<Menu home="#home" about="#about" projects="#pro" cert="#cert"/>
+		<Header id="home" title="Joshua Emil P. Rosario" text="¡Hola! Soy Joshua, un desarrollador web apasionado por la creación de experiencias web dinámicas y funcionales. He dedicado mi tiempo a aprender y mejorar mis habilidades en este campo en constante evolución." link="https://github.com/Joshua-EPR" img="https://i.postimg.cc/y8vDdh47/logo.png" alt="logo"/>
+		<div class="flex justify-center items-center flex-col p-2">
+			<h2 class="text-3xl m-8 p-2">Certifications</h2>
+			<div class="flex justify-center gap-4 flex-wrap">
+				<Certs title="Desarrollador Front-end" img="https://i.postimg.cc/N0JzP23G/Screenshot-20220430-132731-2.png"/>
+				<Certs title="React + Redux" img="https://i.postimg.cc/mkHbQMfc/f6163df9-3944-4ca4-b525-293faa66458e.png"/>
+				<Certs title="CSS" img="https://i.postimg.cc/Hnh6CcVt/5aa2a263-3716-4ee1-b8df-638e2a826a2b.png"/>
+				<Certs title="SQL" img="https://i.postimg.cc/Hnx6K4sx/c5803a28-2279-4971-a46f-54b57cb65d94.png"/>
+				<Certs title="HTML" img="https://i.postimg.cc/KcqqTVJg/e588a279-b0f0-43b2-9dd5-8bf937d8abf8.png"/>
+				<Certs title="JavaScript" img="https://i.postimg.cc/qBbrsmsz/38bef635-4295-404b-896c-ee84b3c39465.png"/>
+			</div>
+		</div>
+	</main>
+</Layout>

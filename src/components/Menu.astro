@@ -1,0 +1,14 @@
+---
+const {home, about, projects, cert} = Astro.props;
+---
+<div class="w-screen flex justify-items-center z-50">
+    <nav class="fixed w-screen p-4 flex justify-center z-50">
+        <ul class="flex justify-between p-4 gap-5 bg-[#000f00a8] backdrop-blur-md w-[500px] rounded-full border">
+            <li class="p-2"><a href={home}>Home</a></li>
+            <li class="p-2"><a href={about}>About me</a></li>
+            <li class="p-2"><a href={projects}>Projects</a></li>
+            <li class="p-2"><a href={cert}>Certifications</a></li>
+        </ul>
+    </nav>
+
+</div>
