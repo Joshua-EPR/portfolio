@@ -13,14 +13,12 @@ import photo from '../assets/photo.jpg';
         alt="Logo" 
         class="w-14 h-14 rounded-full border-2 border-transparent group-hover:border-blue-400 transition-all duration-300 transform group-hover:scale-110" 
       />
-      <span class="text-xl font-bold hidden sm:block bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Joshua Peña</span>
+      <span class="text-xl font-bold hidden sm:block text-white">Joshua <span class="text-blue-400">Peña</span></span>
     </a>
   </div>
 
   <button id="menu-toggle" class="md:hidden text-white text-3xl hover:text-blue-400 transition-colors duration-300">
-    <img class="material-icons">
-      <source media="https://i.postimg.cc/4yf8H0jS/menu-9685070.png" srcset="">
-    </img>
+    <img class="material-icons max-w-10" src="https://i.postimg.cc/4yf8H0jS/menu-9685070.png" alt="Menu"/>
   </button>
 
   <ul id="menu" class="hidden md:flex items-center space-x-8 text-lg font-medium">
@@ -53,4 +51,29 @@ import photo from '../assets/photo.jpg';
     animation: slideIn 0.3s ease-out;
   }
 </style>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+if (menuToggle) {
+  menuToggle.addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    if(menu){
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('menu-mobile');
+    menu.classList.toggle('absolute');
+    menu.classList.toggle('top-20');
+    menu.classList.toggle('right-0');
+    menu.classList.toggle('bg-gray-900/95');
+    menu.classList.toggle('w-full');
+    menu.classList.toggle('flex');
+    menu.classList.toggle('flex-col');
+    menu.classList.toggle('items-center');
+    menu.classList.toggle('py-4');
+    menu.classList.toggle('space-x-0');
+    menu.classList.toggle('space-y-4');
+    }
+  });
+}
+
+</script>
 
