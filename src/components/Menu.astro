@@ -25,7 +25,7 @@ import photo from '../assets/photo.jpg';
     {['Home', 'About Me', 'Projects', 'Contact'].map((item) => (
       <li>
         <a 
-          href={item === 'Contact' ? 'mailto:joshuapenacemas@gmail.com' : '#'} 
+          href={item === 'Contact' ? '#Contact' : (item === 'About Me' ? '#AboutMe' :(item === 'Projects' ? '#Projects' :'#'))} 
           class="relative px-2 py-1 hover:text-blue-400 transition-colors duration-300 before:content-[''] before:absolute before:w-full before:h-0.5 before:bg-blue-400 before:bottom-0 before:left-0 before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300"
         >
           {item}
