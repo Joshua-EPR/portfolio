@@ -1,0 +1,30 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Environment variables
+.env
+ormconfig.json
+
+# Build output
+/dist/
+/build/
+
+# Coverage directory
+/coverage/
+
+# Editor-specific
+.vscode/
+.idea/
+.history/
+.astro/
+# OS-specific
+.DS_Store
+Thumbs.db
+
+

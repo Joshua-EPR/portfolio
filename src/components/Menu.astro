@@ -1,0 +1,64 @@
+---
+import photo from '../assets/photo.jpg';
+---
+
+<nav class="fixed w-full h-20 bg-gray-900/95 backdrop-blur-md text-white flex items-center justify-between px-8 shadow-xl z-50">
+  <div class="logo group">
+    <a href="#" class="flex items-center gap-4">
+      <img 
+        src={photo.src} 
+        alt="Logo" 
+        class="w-14 h-14 rounded-full border-2 border-transparent group-hover:border-blue-400 transition-all duration-300 transform group-hover:scale-110" 
+      />
+      <span class="text-xl font-bold hidden sm:block text-white">Joshua <span class="text-blue-400">Peña</span></span>
+    </a>
+  </div>
+
+  <!-- Botón para menú móvil -->
+  <button id="menu-toggle" class="md:hidden text-white text-3xl hover:text-blue-400 transition-colors duration-300">
+    <img class="w-10 h-10" src="https://i.postimg.cc/4yf8H0jS/menu-9685070.png" alt="Menu"/>
+  </button>
+
+  <!-- Menú -->
+  <ul id="menu" class="hidden md:flex items-center space-x-8 text-lg font-medium">
+    {['Home', 'About Me', 'Projects', 'Contact'].map((item) => (
+      <li>
+        <a 
+          href={item === 'Contact' ? '#Contact' : (item === 'About Me' ? '#AboutMe' : (item === 'Projects' ? '#Projects' : '#'))} 
+          class="relative px-2 py-1 hover:text-blue-400 transition-colors duration-300 before:content-[''] before:absolute before:w-full before:h-0.5 before:bg-blue-400 before:bottom-0 before:left-0 before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300"
+        >
+          {item}
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <!-- Menú móvil (oculto por defecto) -->
+  <ul id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-gray-900/95 flex-col items-center py-4 space-y-4 text-lg font-medium md:hidden transition-all duration-300">
+    {['Home', 'About Me', 'Projects', 'Contact'].map((item) => (
+      <li>
+        <a 
+          href={item === 'Contact' ? '#Contact' : (item === 'About Me' ? '#AboutMe' : (item === 'Projects' ? '#Projects' : '#'))} 
+          class="block px-4 py-2 text-white hover:text-blue-400 transition-colors duration-300"
+        >
+          {item}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+  }
+
+});
+</script>
