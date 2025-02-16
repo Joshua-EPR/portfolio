@@ -1,0 +1,18 @@
+---
+import Projects from "./projects.json";
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+    {Projects.Projects.map(project => (
+        <div class="card bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+            <img class="w-full h-48 object-cover" src={project.image} alt={project.name}>
+            <div class="p-4">
+                <div class="card-title text-2xl font-semibold mb-2">{project.name}</div>
+                <div class="flex justify-between items-center">
+                    <a class="card-link text-blue-600 hover:text-blue-800" target="_blank" href={project.link}>Live</a>
+                    <a class="card-link text-blue-600 hover:text-blue-800" target="_blank" href={project.github}>Github</a>
+                </div>
+            </div>
+        </div>
+    ))}
+</div>
