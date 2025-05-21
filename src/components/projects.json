@@ -4,7 +4,14 @@
             "name": "IDE-Javascript",
             "github": "https://github.com/Joshua-EPR/IDE-Javascript.git",
             "image": "https://i.postimg.cc/B6MYvnxF/Captura-de-pantalla-1.png",
+            "tags": ["Javascript", "React", "Node.js", "monaco-editor/react", "CSS3"],
             "link": "https://ide-javascript.vercel.app/"
+        },
+        {
+            "name": "Auth-google",
+            "github": "https://github.com/Joshua-EPR/auth-google.git",
+            "image": "https://i.imgur.com/YVs9Mpq.png",
+            "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Jwt-decode"]
         }
     ]
 }
