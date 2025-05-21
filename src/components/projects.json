@@ -4,14 +4,39 @@
             "name": "IDE-Javascript",
             "github": "https://github.com/Joshua-EPR/IDE-Javascript.git",
             "image": "https://i.postimg.cc/B6MYvnxF/Captura-de-pantalla-1.png",
-            "tags": ["Javascript", "React", "Node.js", "monaco-editor/react", "CSS3"],
-            "link": "https://ide-javascript.vercel.app/"
+            "tags": ["Javascript", "React", "Node.js", "monaco-editor/react", "CSS3","HTML5"],
+            "link": "https://ide-javascript.vercel.app/",
+            "status": "Finalizado"
         },
         {
             "name": "Auth-google",
             "github": "https://github.com/Joshua-EPR/auth-google.git",
             "image": "https://i.imgur.com/YVs9Mpq.png",
-            "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Jwt-decode"]
+            "tags": ["Next.js", "React", "TypeScript", "HTML5", "Tailwind CSS", "Jwt-decode"],
+            "status": "Finalizado"
+        },
+        {
+            "name": "Mario Clone",
+            "github": "https://github.com/Joshua-EPR/mario-clon.git",
+            "image": "https://i.postimg.cc/SKY5qX91/mario.png",
+            "tags": ["Javascript", "Pharser.js", "CSS3", "HTML5"],
+            "status": "En pausa"
+        },
+        {
+            "name": "Nextjs-Dashboard",
+            "github": "https://github.com/Joshua-EPR/Nextjs-Dashboard.git",
+            "image": "https://i.postimg.cc/pd5pMtBY/node.png",
+            "tags": ["TypeScript", "HTML5", "Tailwind CSS", "Next.js", "React", "Node.js"],
+            "link": "https://nextjs-dashboard-liard-six-43.vercel.app/",
+            "status": "En desarrollo"
+        },
+        {
+            "name": "Python Red Social",
+            "github": "https://github.com/Joshua-EPR/python-red-social.git",
+            "image": "https://i.postimg.cc/rw86xGHB/red.png",
+            "tags": ["Python", "Flask", "Tailwind CSS", "Flask-WTF", "Flask-Login", "Flask-SQLAlchemy", "HTML5", "Werkzeug"],
+            "link": "https://joshuaemil.pythonanywhere.com/",
+            "status": "Finalizado"
         }
     ]
 }

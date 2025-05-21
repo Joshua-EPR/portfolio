@@ -3,6 +3,7 @@ import photo from '../assets/photo.jpg';
 ---
 
 <nav class="fixed scroll-smooth w-full h-20 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500/95 backdrop-blur-md text-white flex items-center justify-between px-8 shadow-2xl z-50 animate-fade-in-down">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <div class="logo group">
     <a href="#" class="flex items-center gap-4">
       <img 
@@ -16,7 +17,8 @@ import photo from '../assets/photo.jpg';
 
   <!-- Botón para menú móvil -->
   <button id="menu-toggle" class="md:hidden text-white text-3xl hover:text-blue-400 transition-colors duration-300">
-    <img class="w-10 h-10" src="https://i.postimg.cc/4yf8H0jS/menu-9685070.png" alt="Menu"/>
+    <!-- <img class="w-10 h-10" src="https://i.postimg.cc/4yf8H0jS/menu-9685070.png" alt="Menu"/> -->
+   <i class="fa-solid fa-bars fa-bounce w-10 h-10" style="color: #fff;"></i>
   </button>
 
   <!-- Menú -->
@@ -35,10 +37,10 @@ import photo from '../assets/photo.jpg';
 
   <!-- Menú móvil (oculto por defecto) -->
   <ul id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500/95 flex-col items-center py-4 space-y-4 text-lg font-semibold md:hidden transition-all duration-300">
-    {['Home', 'About Me', 'Projects', 'Contact'].map((item) => (
+    {['Inicio', 'Sobre mí', 'Proyectos', 'Contáctame'].map((item) => (
       <li>
         <a 
-          href={item === 'Contact' ? '#Contact' : (item === 'About Me' ? '#AboutMe' : (item === 'Projects' ? '#Projects' : '#'))} 
+          href={item === 'Contáctame' ? '#Contact' : (item === 'Sobre mí' ? '#AboutMe' : (item === 'Proyectos' ? '#Projects' : '#'))} 
           class="block px-4 py-2 text-white transition-colors duration-300"
         >
           {item}
