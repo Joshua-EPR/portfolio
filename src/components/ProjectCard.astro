@@ -2,15 +2,22 @@
 import Projects from "./projects.json";
 ---
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 p-8">
     {Projects.Projects.map(project => (
-        <div class="card bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
-            <img class="w-full h-48 object-cover" src={project.image} alt={project.name}>
-            <div class="p-4">
-                <div class="card-title text-2xl font-semibold mb-2">{project.name}</div>
-                <div class="flex justify-between items-center">
-                    <a class="card-link text-blue-600 hover:text-blue-800" target="_blank" href={project.link}>Live</a>
-                    <a class="card-link text-blue-600 hover:text-blue-800" target="_blank" href={project.github}>Github</a>
+        <div class="card bg-white border-2 border-blue-200 rounded-3xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 hover:shadow-blue-300 animate-fade-in-up cursor-pointer group max-w-xl mx-auto">
+            <img class="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300" src={project.image} alt={project.name} />
+            <div class="p-6 flex flex-col gap-3">
+                <div class="card-title text-3xl font-extrabold mb-1 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">{project.name}</div>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    {project.tags && project.tags.map(tag => (
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">{tag}</span>
+                    ))}
+                </div>
+                {/* <div class="text-gray-600 text-base mb-4">{project}</div> */}
+                <div class="flex gap-4 mt-auto">
+                    {project.link && <a class="inline-block px-5 py-2 rounded-lg bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold shadow-md hover:from-blue-500 hover:to-blue-700 transition-all duration-300" target="_blank" href={project.link}>Ver Proyecto</a>}
+                    {/* <a class="inline-block px-5 py-2 rounded-lg bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold shadow-md hover:from-blue-500 hover:to-blue-700 transition-all duration-300" target="_blank" href={project.link}>Ver Proyecto</a> */}
+                    <a class="inline-block px-5 py-2 rounded-lg border-2 border-blue-400 text-blue-600 font-bold hover:bg-blue-50 transition-all duration-300" target="_blank" href={project.github}>Código</a>
                 </div>
             </div>
         </div>

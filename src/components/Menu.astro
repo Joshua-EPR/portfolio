@@ -2,15 +2,15 @@
 import photo from '../assets/photo.jpg';
 ---
 
-<nav class="fixed w-full h-20 bg-gray-900/95 backdrop-blur-md text-white flex items-center justify-between px-8 shadow-xl z-50">
+<nav class="fixed scroll-smooth w-full h-20 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500/95 backdrop-blur-md text-white flex items-center justify-between px-8 shadow-2xl z-50 animate-fade-in-down">
   <div class="logo group">
     <a href="#" class="flex items-center gap-4">
       <img 
         src={photo.src} 
         alt="Logo" 
-        class="w-14 h-14 rounded-full border-2 border-transparent group-hover:border-blue-400 transition-all duration-300 transform group-hover:scale-110" 
+        class="w-14 h-14 rounded-full border-2 border-transparent group-hover:border-blue-400 transition-all duration-300 transform group-hover:scale-110 shadow-lg" 
       />
-      <span class="text-xl font-bold hidden sm:block text-white">Joshua <span class="text-blue-400">Peña</span></span>
+      <span class="text-2xl font-extrabold hidden sm:block text-white tracking-wide animate-gradient-x">Joshua <span class="text-blue-400">Peña</span></span>
     </a>
   </div>
 
@@ -20,12 +20,12 @@ import photo from '../assets/photo.jpg';
   </button>
 
   <!-- Menú -->
-  <ul id="menu" class="hidden md:flex items-center space-x-8 text-lg font-medium">
-    {['Home', 'About Me', 'Projects', 'Contact'].map((item) => (
+  <ul id="menu" class="hidden md:flex items-center space-x-8 text-lg font-semibold">
+    {['Inicio', 'Sobre mí', 'Proyectos', 'Contáctame'].map((item) => (
       <li>
         <a 
-          href={item === 'Contact' ? '#Contact' : (item === 'About Me' ? '#AboutMe' : (item === 'Projects' ? '#Projects' : '#'))} 
-          class="relative px-2 py-1 hover:text-blue-400 transition-colors duration-300 before:content-[''] before:absolute before:w-full before:h-0.5 before:bg-blue-400 before:bottom-0 before:left-0 before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300"
+          href={item === 'Contáctame' ? '#Contact' : (item === 'Sobre mí' ? '#AboutMe' : (item === 'Proyectos' ? '#Projects' : '#'))} 
+          class="relative px-2 py-1 transition-colors duration-300 before:content-[''] before:absolute before:w-full before:h-0.5 before:bg-blue-400 before:bottom-0 before:left-0 before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300"
         >
           {item}
         </a>
@@ -34,12 +34,12 @@ import photo from '../assets/photo.jpg';
   </ul>
 
   <!-- Menú móvil (oculto por defecto) -->
-  <ul id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-gray-900/95 flex-col items-center py-4 space-y-4 text-lg font-medium md:hidden transition-all duration-300">
+  <ul id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500/95 flex-col items-center py-4 space-y-4 text-lg font-semibold md:hidden transition-all duration-300">
     {['Home', 'About Me', 'Projects', 'Contact'].map((item) => (
       <li>
         <a 
           href={item === 'Contact' ? '#Contact' : (item === 'About Me' ? '#AboutMe' : (item === 'Projects' ? '#Projects' : '#'))} 
-          class="block px-4 py-2 text-white hover:text-blue-400 transition-colors duration-300"
+          class="block px-4 py-2 text-white transition-colors duration-300"
         >
           {item}
         </a>

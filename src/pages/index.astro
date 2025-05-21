@@ -11,13 +11,13 @@ import Contact from '../components/Contact.astro';
 ---
 
 <Layout>
-	<div class="container justify-between flex flex-col min-h-screen de">
-		<Menu />
-		<Header />
-		<div class="container mx-auto px-4 py-20 bg-slate-200">
-			<AboutMe />
-			<Contact />
-		</div>
-		<Footer />
-	</div>
+  <div class="container flex scroll-smooth flex-col min-h-screen bg-gradient-to-br from-blue-200 via-blue-100 to-blue-50 animate-fade-in">
+    <Menu />
+    <Header />
+    <div class="container mx-auto px-4 py-10 bg-white/70 shadow-2xl backdrop-blur-md animate-fade-in-up">
+      <AboutMe />
+      <Contact />
+    </div>
+    <Footer />
+  </div>
 </Layout>
